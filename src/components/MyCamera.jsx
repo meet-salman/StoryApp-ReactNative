@@ -13,7 +13,7 @@ const MyCamera = () => {
     const cameraRef = useRef();
 
     useEffect(() => {
-        requestPermission();
+        // requestPermission();
         requestMediaPermission();
     }, [])
 
@@ -21,8 +21,8 @@ const MyCamera = () => {
 
     if (!permission.granted) {
         return <View>
-            <Text style={{ marginBottom: 30 }}> We need your permission to access camera... </Text>
-            <Button onPress={requestPermission} title='Allow Camera' />
+            {/* <Text style={{ marginBottom: 30 }}> We need your permission to access camera... </Text> */}
+            <Button onPress={requestPermission} title='Open Camera' />
         </View>
     }
 
